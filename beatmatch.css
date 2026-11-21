@@ -1,0 +1,94 @@
+#browser-dj .beatmatch-tools {
+  border-top: 1px solid var(--line);
+  background: var(--inset);
+  font-size: 12px;
+}
+
+#browser-dj .beat-instructions {
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+}
+
+#browser-dj .beat-decks {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+#browser-dj .beat-deck {
+  display: grid;
+  align-content: start;
+  gap: 4px;
+  min-width: 0;
+  padding: 7px 10px;
+}
+
+#browser-dj .beat-deck + .beat-deck {
+  border-inline-start: 1px solid var(--line);
+}
+
+#browser-dj .beat-keys,
+#browser-dj .beat-nudge,
+#browser-dj .beat-keys label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#browser-dj .beat-keys {
+  flex-wrap: wrap;
+}
+
+#browser-dj .beat-id {
+  display: grid;
+  flex: 0 0 22px;
+  place-items: center;
+  height: 22px;
+  border-radius: 5px;
+  background: var(--deck-tint);
+  color: var(--deck-color);
+  font-weight: 700;
+}
+
+#browser-dj .beat-keys label {
+  white-space: nowrap;
+}
+
+#browser-dj .beat-keys input {
+  width: 6em;
+  padding: 4px 5px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--surface);
+  color: inherit;
+  font-variant-numeric: tabular-nums;
+}
+
+#browser-dj .beat-keys button {
+  padding: 4px 7px;
+}
+
+#browser-dj .beat-sync {
+  color: var(--deck-color);
+  background: var(--deck-tint);
+}
+
+#browser-dj .beat-status {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+#browser-dj .beat-feedback {
+  color: var(--deck-color);
+}
+
+@media (max-width: 620px) {
+  #browser-dj .beat-decks {
+    grid-template-columns: 1fr;
+  }
+
+  #browser-dj .beat-deck + .beat-deck {
+    border-inline-start: 0;
+    border-top: 1px solid var(--line);
+  }
+}
